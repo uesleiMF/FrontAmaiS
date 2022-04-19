@@ -216,6 +216,7 @@ export default class Dashboard extends Component {
       desc: data.desc,
       tel: data.tel,
       cargo: data.cargo,
+      dataAni: data.dataAni,
       fileName: data.image
     });
   };
@@ -298,6 +299,17 @@ export default class Dashboard extends Component {
               placeholder="Cargo"
               required
             /><br /><br />
+              <TextField
+              id="standard-basic"
+              type="text"
+              autoComplete="off"
+              name="dataAni"
+              value={this.state.dataAni}
+              onChange={this.onChange}
+              placeholder="Data de Aniversario"
+              required
+            /><br /><br />
+
             <Button
               variant="contained"
               component="label"
@@ -378,6 +390,17 @@ export default class Dashboard extends Component {
               placeholder="Cargo"
               required
             /><br /><br />
+              <TextField
+              id="standard-basic"
+              type="text"
+              autoComplete="off"
+              name="dataAni"
+              value={this.state.dataAni}
+              onChange={this.onChange}
+              placeholder="Data de Aniversario"
+              required
+            /><br /><br />
+
             <Button
               variant="contained"
               component="label"
@@ -406,7 +429,7 @@ export default class Dashboard extends Component {
               Cancelar
             </Button>
             <Button
-              disabled={this.state.name == '' || this.state.desc == '' || this.state.cargo == '' || this.state.tel == '' || this.state.file == null}
+              disabled={this.state.name == '' || this.state.desc == '' || this.state.cargo == '' || this.state.tel == ''|| this.state.dataAni == '' || this.state.file == null}
               onClick={(e) => this.addProduct()} color="primary" autoFocus>
               Adicionar Casal
             </Button>
@@ -435,6 +458,7 @@ export default class Dashboard extends Component {
                 <TableCell align="center">Telefone</TableCell>
                 <TableCell align="center">Cargo</TableCell>
                 <TableCell align="center">Ação</TableCell>
+                <TableCell align="center">Data Aniversario</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -447,6 +471,7 @@ export default class Dashboard extends Component {
                   <TableCell align="center">{row.desc}</TableCell>
                   <TableCell align="center">{row.tel}</TableCell>
                   <TableCell align="center">{row.cargo}</TableCell>
+                  <TableCell align="center">{row.dataAni}</TableCell>
                   <TableCell align="center">
                     <Button
                       className="button_style"
