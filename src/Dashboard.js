@@ -20,6 +20,7 @@ export default class Dashboard extends Component {
       desc: '',
       tel: '',
       cargo: '',
+      dataAni:'',
       file: '',
       fileName: '',
       page: 1,
@@ -124,6 +125,7 @@ export default class Dashboard extends Component {
     file.append('name', this.state.name);
     file.append('desc', this.state.desc);
     file.append('cargo', this.state.cargo);
+    file.append('dataAni', this.state.dataAni);
     file.append('tel', this.state.tel);
 
     axios.post('https://listpr.herokuapp.com/add-product', file, {
@@ -140,7 +142,7 @@ export default class Dashboard extends Component {
       });
 
       this.handleProductClose();
-      this.setState({ name: '', desc: '', cargo: '', tel: '', file: null, page: 1 }, () => {
+      this.setState({ name: '', desc: '', cargo: '', tel: '', dataAni: '', file: null, page: 1 }, () => {
         this.getProduct();
       });
     }).catch((err) => {
@@ -162,6 +164,7 @@ export default class Dashboard extends Component {
     file.append('name', this.state.name);
     file.append('desc', this.state.desc);
     file.append('cargo', this.state.cargo);
+    file.append('dataAni', this.state.dataAni);
     file.append('tel', this.state.tel);
 
     axios.post('https://listpr.herokuapp.com/update-product', file, {
@@ -178,7 +181,7 @@ export default class Dashboard extends Component {
       });
 
       this.handleProductEditClose();
-      this.setState({ name: '', desc: '', cargo: '', tel: '', file: null }, () => {
+      this.setState({ name: '', desc: '', cargo: '', tel: '',dataAni: '', file: null }, () => {
         this.getProduct();
       });
     }).catch((err) => {
@@ -200,6 +203,7 @@ export default class Dashboard extends Component {
       desc: '',
       tel: '',
       cargo: '',
+      dataAni:'',
       fileName: ''
     });
   };
