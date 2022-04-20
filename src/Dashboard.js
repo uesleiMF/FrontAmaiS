@@ -338,7 +338,7 @@ export default class Dashboard extends Component {
               Cancelar
             </Button>
             <Button
-              disabled={this.state.name == '' || this.state.desc == '' || this.state.cargo == '' || this.state.tel == ''}
+              disabled={this.state.name == '' || this.state.desc == '' || this.state.cargo == '' || this.state.tel == ''|| this.state.dataAni == ''}
               onClick={(e) => this.updateProduct()} color="primary" autoFocus>
               Editar Casal
             </Button>
@@ -461,8 +461,9 @@ export default class Dashboard extends Component {
                 <TableCell align="center">Descrição</TableCell>
                 <TableCell align="center">Telefone</TableCell>
                 <TableCell align="center">Cargo</TableCell>
-                <TableCell align="center">Ação</TableCell>
-                <TableCell align="center">Data Aniversario</TableCell>
+               <TableCell align="center">Data Aniversario</TableCell>
+               <TableCell align="center">Ação</TableCell>
+              
               </TableRow>
             </TableHead>
             <TableBody>
@@ -471,7 +472,7 @@ export default class Dashboard extends Component {
                   <TableCell align="center" component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="center"><img src={`https://listpr.herokuapp.com/${row.image}`} width="100" height="100" /></TableCell>
+                  <TableCell align="center"><img src={`https://listpr.herokuapp.com/${row.image}`} width="250" height="150" /></TableCell>
                   <TableCell align="center">{row.desc}</TableCell>
                   <TableCell align="center">{row.tel}</TableCell>
                   <TableCell align="center">{row.cargo}</TableCell>
