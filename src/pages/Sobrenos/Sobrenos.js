@@ -11,7 +11,8 @@ export default function Sobrenos() {
       <div className="card mt-6 bg-warning">
         <div className="card-title">
           <div className="row">
-            <div className="col">
+            
+              <div className="col-xs-12 .col-md-8">
               <br></br>
               <h3 className="mx-3 my-3 text-center">BIOGRAFIA DA REDE DE CASAIS</h3>
               <h3 className="mx-3 my-3 text-center">AMAI SEMPRE</h3>
@@ -170,6 +171,7 @@ export default function Sobrenos() {
       
       </div>
         </div>
+        
        
   );
 }

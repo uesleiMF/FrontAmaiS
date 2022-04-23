@@ -27,7 +27,7 @@ export default function Home() {
     <div className="card mt-2 bg-info">
       <div className="card-title">
         <div className="row">
-          <div className="col">
+        <div className="col-xs-12 .col-md-8">
              <h3 className="mx-3 my-3 text-center"> REDE DE CASAIS</h3>
              <h4 className="mx-3 my-3 text-center"> AMAI SEMPRE</h4>
               
