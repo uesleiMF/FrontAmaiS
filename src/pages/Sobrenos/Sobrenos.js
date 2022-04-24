@@ -1,5 +1,6 @@
 import React from "react";
-
+import "./stilo.css";
+import i1 from "../../components/Img/i1.jpg";
 import c1 from "../../components/Img/c1.jpg";
 import c2 from "../../components/Img/c2.jpg";
 import c3 from "../../components/Img/c3.jpg";
@@ -11,8 +12,7 @@ export default function Sobrenos() {
       <div className="card mt-6 bg-warning">
         <div className="card-title">
           <div className="row">
-            
-              <div className="col-xs-12 .col-md-8">
+            <div className="col">
               <br></br>
               <h3 className="mx-3 my-3 text-center">BIOGRAFIA DA REDE DE CASAIS</h3>
               <h3 className="mx-3 my-3 text-center">AMAI SEMPRE</h3>
@@ -41,7 +41,7 @@ export default function Sobrenos() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c1} alt="bo"  className="card-img-top "/>
+            <img src={i1} alt="bo"  className="card-img-top "/>
               </a>
               
              <div className="card-body ">
@@ -171,7 +171,6 @@ export default function Sobrenos() {
       
       </div>
         </div>
-        
        
   );
 }
