@@ -51,7 +51,7 @@ export default class Dashboard extends Component {
     if (this.state.search) {
       data = `${data}&search=${this.state.search}`;
     }
-    axios.get(`https://listpr.herokuapp.com/get-product${data}`, {
+    axios.get(`https://back-test-m.vercel.app/get-product${data}`, {
       headers: {
         'token': this.state.token
       }
@@ -68,7 +68,7 @@ export default class Dashboard extends Component {
   }
 
   deleteProduct = (id) => {
-    axios.post('https://listpr.herokuapp.com/delete-product', {
+    axios.post('https://back-test-m.vercel.app/delete-product', {
       id: id
     }, {
       headers: {
@@ -128,7 +128,7 @@ export default class Dashboard extends Component {
     file.append('dataAni', this.state.dataAni);
     file.append('tel', this.state.tel);
 
-    axios.post('https://listpr.herokuapp.com/add-product', file, {
+    axios.post('https://back-test-m.vercel.app/add-product', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -167,7 +167,7 @@ export default class Dashboard extends Component {
     file.append('dataAni', this.state.dataAni);
     file.append('tel', this.state.tel);
 
-    axios.post('https://listpr.herokuapp.com/update-product', file, {
+    axios.post('https://back-test-m.vercel.app/update-product', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -472,7 +472,7 @@ export default class Dashboard extends Component {
                   <TableCell align="center" component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="center"><img src={`https://listpr.herokuapp.com/${row.image}`} width="200px" height="200px" /></TableCell>
+                  <TableCell align="center"><img src={`https://back-test-m.vercel.app/${row.image}`} width="100" height="100" /></TableCell>
                   <TableCell align="center">{row.desc}</TableCell>
                   <TableCell align="center">{row.tel}</TableCell>
                   <TableCell align="center">{row.cargo}</TableCell>
