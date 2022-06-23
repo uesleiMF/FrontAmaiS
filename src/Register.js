@@ -17,7 +17,7 @@ export default class Register extends React.Component {
 
   register = () => {
 
-    axios.post('https://back-test-m.vercel.app/register', {
+    axios.post('https://projeto----amai.herokuapp.com/register', {
       username: this.state.username,
       password: this.state.password,
     }).then((res) => {

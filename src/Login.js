@@ -20,7 +20,7 @@ export default class Login extends React.Component {
 
     const pwd = bcrypt.hashSync(this.state.password, salt);
 
-    axios.post('https://back-test-m.vercel.app/login', {
+    axios.post('https://projeto----amai.herokuapp.com/login', {
       username: this.state.username,
       password: pwd,
     }).then((res) => {
